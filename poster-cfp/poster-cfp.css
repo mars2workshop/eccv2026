@@ -1,0 +1,364 @@
+:root {
+  --ink: #232323;
+  --soft-ink: #454545;
+  --muted: #6a6a6a;
+  --line: #dedede;
+  --panel: #fafafa;
+  --accent: #8f171a;
+  --accent-soft: #f7eeee;
+  --paper: #ffffff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #d8d8d8;
+  color: var(--ink);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.poster {
+  position: relative;
+  width: 1080px;
+  height: 1620px;
+  overflow: hidden;
+  padding: 56px 76px 50px;
+  background: var(--paper);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.18);
+}
+
+.poster::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 10px;
+  background: var(--accent);
+}
+
+.masthead {
+  display: grid;
+  grid-template-columns: 166px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.masthead img {
+  width: 166px;
+  height: auto;
+  margin-top: 4px;
+}
+
+.masthead p {
+  margin: 0;
+  color: var(--accent);
+  font-size: 33px;
+  line-height: 1;
+  font-weight: 850;
+}
+
+.masthead h1 {
+  margin: 8px 0 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 60px;
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.masthead span {
+  display: block;
+  margin-top: 9px;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 39px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.hero {
+  margin-top: 24px;
+  padding: 22px 28px;
+  background: var(--accent-soft);
+  border: 1px solid #ead3d3;
+}
+
+.hero h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 35px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.hero p {
+  margin: 16px 0 0;
+  max-width: 830px;
+  color: var(--soft-ink);
+  font-size: 18px;
+  line-height: 1.36;
+  font-weight: 620;
+}
+
+.scope {
+  margin-top: 26px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.scope h2,
+.submission h2,
+.dates h2,
+.organizers h2,
+.hosts h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 29px;
+  line-height: 1.1;
+  font-weight: 850;
+}
+
+.scope p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.34;
+}
+
+.scope ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 14px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scope li {
+  min-height: 36px;
+  padding: 8px 12px 8px 16px;
+  color: var(--soft-ink);
+  background: var(--panel);
+  border-left: 4px solid var(--accent);
+  font-size: 14px;
+  line-height: 1.28;
+  font-weight: 720;
+}
+
+.middle-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 378px;
+  gap: 30px;
+  margin-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.submission ul {
+  margin: 14px 0 0;
+  padding-left: 24px;
+  color: var(--soft-ink);
+  font-size: 18px;
+  line-height: 1.34;
+  font-weight: 620;
+}
+
+.submission li {
+  margin: 7px 0;
+}
+
+.dates {
+  padding: 18px 20px 14px;
+  background: var(--panel);
+  border-top: 5px solid var(--accent);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.dates h2 {
+  margin-bottom: 10px;
+}
+
+.dates article {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.dates span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dates strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.organizers {
+  margin-top: 22px;
+}
+
+.organizer-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 20px;
+  margin-top: 12px;
+}
+
+.organizer-list span {
+  color: var(--soft-ink);
+  font-size: 14.5px;
+  line-height: 1.18;
+  font-weight: 620;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 178px;
+  gap: 30px;
+  align-items: end;
+  margin-top: 52px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.host-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 12px;
+  margin-top: 16px;
+}
+
+.host-grid figure {
+  display: grid;
+  grid-template-rows: 42px auto;
+  align-items: center;
+  justify-items: center;
+  min-height: 78px;
+  margin: 0;
+  padding: 8px 8px 7px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.host-grid img {
+  width: 100%;
+  height: 36px;
+  object-fit: contain;
+}
+
+.host-grid figcaption {
+  align-self: end;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.14;
+  font-weight: 760;
+  text-align: center;
+}
+
+.host-grid .logo-tecdo {
+  height: 30px;
+}
+
+.host-grid .logo-oxford,
+.host-grid .logo-snu,
+.host-grid .logo-tsinghua {
+  height: 36px;
+}
+
+.host-grid .logo-ntu {
+  height: 32px;
+}
+
+.host-grid .logo-insait {
+  height: 26px;
+}
+
+.qr {
+  display: grid;
+  justify-items: center;
+  align-self: end;
+  justify-self: end;
+  width: 156px;
+  height: 156px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.qr img {
+  width: 132px;
+  height: 132px;
+  background: #fff;
+}
+
+.contact-email {
+  margin-top: 18px;
+  color: var(--soft-ink);
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 760;
+  letter-spacing: 0;
+  text-align: right;
+}
+
+@media (max-width: 1120px) {
+  body {
+    place-items: start center;
+    padding: 20px;
+  }
+}
+
+@media print {
+  html,
+  body {
+    width: 1080px;
+    height: 1620px;
+    min-height: 0;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  body {
+    display: block;
+  }
+
+  .poster {
+    box-shadow: none;
+  }
+}
+
+@page {
+  size: 1080px 1620px;
+  margin: 0;
+}
