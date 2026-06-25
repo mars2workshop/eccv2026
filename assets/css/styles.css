@@ -441,6 +441,73 @@ img {
   margin-top: 8px;
 }
 
+#competition {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.sponsor-divider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+  padding: 16px 0 58px;
+}
+
+.sponsor-divider::before {
+  content: "";
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 26px;
+  left: 0;
+  border-top: 1px solid var(--line);
+}
+
+.sponsor-lockup {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 0 24px 2px;
+}
+
+.sponsor-kicker {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sponsor-mark {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.sponsor-logo-minimax {
+  width: 154px;
+  height: auto;
+}
+
+.sponsor-logo-tecdo {
+  width: 186px;
+  height: auto;
+}
+
+.sponsor-multiply {
+  color: var(--accent);
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 800;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -551,6 +618,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .sponsor-lockup {
+    text-align: center;
+  }
+
   .site-footer {
     display: block;
   }
@@ -653,6 +724,34 @@ img {
 
   .schedule-table td:nth-child(2) {
     font-size: 15px;
+  }
+
+  .sponsor-divider {
+    margin-top: 30px;
+    padding-bottom: 54px;
+  }
+
+  .sponsor-lockup {
+    width: auto;
+    padding: 0 16px 2px;
+  }
+
+  .sponsor-kicker {
+    font-size: 11px;
+  }
+
+  .sponsor-mark {
+    justify-content: center;
+    gap: 12px;
+    width: auto;
+  }
+
+  .sponsor-logo-minimax {
+    width: 108px;
+  }
+
+  .sponsor-logo-tecdo {
+    width: 132px;
   }
 
   .link-grid {
